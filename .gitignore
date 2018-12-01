@@ -1,8 +1,2 @@
-S_Store
-humbs.db
-db.json
-*.log
 node_modules/
-public/
-.deploy*/
 .idea
