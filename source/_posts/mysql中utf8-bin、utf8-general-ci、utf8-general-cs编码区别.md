@@ -1,12 +1,12 @@
 ---
-title: mysql中utf8_bin、utf8_general_ci、utf8_general_cs编码区别
+title: Mysql中utf8_bin、utf8_general_ci、utf8_general_cs编码区别
 date: 2017-01-29 17:00:54
-tags: mysql
+tags: Mysql
 ---
 
-mysql中utf8_bin、utf8_general_ci、utf8_general_cs编码区别
+Mysql中utf8_bin、utf8_general_ci、utf8_general_cs编码区别
 
-在mysql中存在着各种utf8编码格式，如下表：
+在Mysql中存在着各种utf8编码格式，如下表：
 
 1）utf8_bin
 

@@ -177,7 +177,7 @@ ELSE [default result]
 END
 这种条件下，返回的结果取决于相应的条件测试是否为真。
 示例：
-mysql>SELECT CASE 'green'
+Mysql>SELECT CASE 'green'
      WHEN 'red' THEN 'stop'
      WHEN 'green' THEN 'go' END;
 SELECT CASE 9 WHEN 1 THEN 'a' WHEN 2 THEN 'b' ELSE 'N/A' END;
@@ -245,7 +245,7 @@ name VARCHAR(255),
 birthday DATE
 );
 
-###　查看mysql创建表:
+###　查看Mysql创建表:
 
 SHOW CREATE table person;
 
@@ -294,14 +294,14 @@ CREATE TABLE new_tbl SELECT * FROM orig_tbl;
 
 注意，用SELECT语句创建的列附在表的右侧，而不是覆盖在表上
 
-mysql> SELECT * FROM foo;
+Mysql> SELECT * FROM foo;
 +---+
 | n |
 +---+
 | 1 |
 +---+
-mysql> CREATE TABLE bar (m INT) SELECT n FROM foo;
-mysql> SELECT * FROM bar;
+Mysql> CREATE TABLE bar (m INT) SELECT n FROM foo;
+Mysql> SELECT * FROM bar;
 +------+---+
 | m    | n |
 +------+---+

@@ -14,9 +14,9 @@ MySQL可为你提供3类有价值的信息：
 MySQL 服务器的信息 数据库服务器的状态以及数据库版本号等信息。
 
 
-# Python与mysql
+# Python与Mysql
 
-使用pymysql 或者 mysqldb(只能用于python2)
+使用pyMysql 或者 Mysqldb(只能用于python2)
 
 http://www.jb51.net/article/92516.htm
 
@@ -25,56 +25,56 @@ http://www.jb51.net/article/92516.htm
 # 安装
 
 ```
-1.sudo apt-get install mysql-server
+1.sudo apt-get install Mysql-server
 
-2.apt-get isntall mysql-client
+2.apt-get isntall Mysql-client
 
-3.sudo apt-get install libmysqlclient-dev
+3.sudo apt-get install libMysqlclient-dev
 
-4. sudo apt-get install libmysqld-dev (原来使用apt-get安装的MySQL是没有mysql_config这个文件的,不然安装pip install mysql-python会报错)
+4. sudo apt-get install libMysqld-dev (原来使用apt-get安装的MySQL是没有Mysql_config这个文件的,不然安装pip install Mysql-python会报错)
 
 检查安装上了没
 
 sudo netstat -tap | grep mysq
-mysql --version
+Mysql --version
 
 ```
 
 # 彻底卸载
 
 ```
-sudo apt-get remove mysql-server
-sudo apt-get autoremove mysql-server
-sudo apt-get remove mysql-common
+sudo apt-get remove Mysql-server
+sudo apt-get autoremove Mysql-server
+sudo apt-get remove Mysql-common
 dpkg -l |grep ^rc|awk '{print $2}' |sudo xargs dpkg -P
 
-卸载完后看看mysql命令还能用么,如果还有,强制删除:
-rm -rf /usr/bin/mysql
+卸载完后看看Mysql命令还能用么,如果还有,强制删除:
+rm -rf /usr/bin/Mysql
 
 ```
 
 # 登录
 
 
-mysql　-D　所选择的数据库名 -h 主机名 -u 用户名 -p
+Mysql　-D　所选择的数据库名 -h 主机名 -u 用户名 -p
 
 用createtable.sql内的语句,在samp_db创建一个表
-mysql -D samp_db -u root -p < createtable.sql
+Mysql -D samp_db -u root -p < createtable.sql
 
 
 
 # 关闭,启动和重启
 
-关闭情况下使用mysql会报错
+关闭情况下使用Mysql会报错
 
 ```
-ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/run/Mysqld/Mysqld.sock' (2)
 ```
 
 检查是否运行了
 
 ```
-ps -ef | grep mysqld
+ps -ef | grep Mysqld
 ```
 
 
@@ -84,19 +84,19 @@ ps -ef | grep mysqld
 
 
 ```
-service mysql start
+service Mysql start
 
-service mysql stop
+service Mysql stop
 
-service mysql restart
+service Mysql restart
 
-另外一些发行版本会重命名为mysqld
+另外一些发行版本会重命名为Mysqld
 
-service mysqld start
+service Mysqld start
 
-service mysqld stop
+service Mysqld stop
 
-service mysqld restart
+service Mysqld restart
 
 ```
 
@@ -104,11 +104,11 @@ service mysqld restart
 service 命令就是调用/etc/init.d/下边的脚本来启动服务,可以直接这么操作
 
 ```
-/etc/init.d/mysqld start
+/etc/init.d/Mysqld start
 
-/etc/init.d/mysqld stop
+/etc/init.d/Mysqld stop
 
-/etc/init.d/mysqld restart
+/etc/init.d/Mysqld restart
 ```
 
 
@@ -131,7 +131,7 @@ show tables from xxx
 ### 表的列信息
 
 show columns from XXX;
-show columns from mysql.user;
+show columns from Mysql.user;
 
 
 ### 表创建时的信息
@@ -139,7 +139,7 @@ show columns from mysql.user;
 SHOW CREATE TABLE `user` \G
 这样可以看到创建时信息,可以克隆一张表
 
-http://wiki.jikexueyuan.com/project/mysql/clone-tables.html
+http://wiki.jikexueyuan.com/project/Mysql/clone-tables.html
 
 ### 表的引擎，版本，名称等信息
 
@@ -167,8 +167,8 @@ create database samp_db character set gbk;
 
 或者
 
-mysqladmin -u root -p create TUTORIALS
-mysqladmin -u root -p drop TUTORIALS
+Mysqladmin -u root -p create TUTORIALS
+Mysqladmin -u root -p drop TUTORIALS
 
 ### 创建表
 
@@ -316,7 +316,7 @@ SHOW STATUS	服务器状态指示器
 SHOW VARIABLES	服务器配置变量
 
 
-# mysqlworkbench
+# Mysqlworkbench
 
 下载
 http://jingyan.baidu.com/article/c843ea0b81786d77931e4a95.html
@@ -336,7 +336,7 @@ AI：auto increment 自增
 其他GUI工具
 1）sqlyog 需要收费，当然有破解版，功能最全，好用
 2）navicat 有入门和收费两种，普通使用，入门就足够了。界面小清新。
-3）mysql workbench 官方出的GUI，还在不断改进中，基本功能都比较稳定，也是唯一支持多平台的一个GUI
+3）Mysql workbench 官方出的GUI，还在不断改进中，基本功能都比较稳定，也是唯一支持多平台的一个GUI
 
 
 ## Pycharm自带的数据插件
@@ -366,10 +366,10 @@ pycharm 使用教程（六）进行简单的数据库管理
 
 3）为数据库连接取一个名称，选择一个JDBC driver files。如果没有这个文件，pycharm可以自动下载。
 
-4）选择一个JDBC driver class，mysql默认为：com.mysql.jdbc.Driver。oracle默认为：oracle.jdbc.OracleDriver
+4）选择一个JDBC driver class，Mysql默认为：com.Mysql.jdbc.Driver。oracle默认为：oracle.jdbc.OracleDriver
 
 5）编写Database URL,示例：
-      myql:jdbc:mysql://localhost:3306
+      myql:jdbc:Mysql://localhost:3306
       jdbc:oracle:thin:@localhost:1521:server
 
 6）填写用户名和密码。
@@ -381,4 +381,4 @@ pycharm 使用教程（六）进行简单的数据库管理
 9）OK
 
 参考
-http://wiki.jikexueyuan.com/project/mysql-21-minutes/overview.html
+http://wiki.jikexueyuan.com/project/Mysql-21-minutes/overview.html

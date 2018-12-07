@@ -1,7 +1,7 @@
 ---
 title: Animate.css
 date: 2016-02-17 15:14:50
-tags: Frontend
+tags: FrontEnd
 ---
 
 https://daneden.github.io/animate.css/
