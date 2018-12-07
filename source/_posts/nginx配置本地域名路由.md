@@ -5,8 +5,6 @@ date: 2017-09-17 15:14:50
 tags: Nginx
 ---
 
-# nginx配置:server_name的作用
-
 
 ## 处理过程
 
