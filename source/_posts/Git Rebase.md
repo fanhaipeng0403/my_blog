@@ -4,12 +4,15 @@ date: 2017-09-17 15:14:50
 tags: Git
 ---
 
+https://www.jianshu.com/p/5c9c6383aa36﻿
 
 
 # 变基
 
 总的原则是，只对尚未推送或分享给别人的本地修改执行变基操作清理历史，从不对已推送至别处的提交执行变基操作.
 
+
+## 开发合并别人的分支，保存图谱干净
 
 * 在dev1分支上进行开发，然后commit提交，在dev1分支上生成一个提交单。
 * 切换到master分支，与remote/master分支同步。
@@ -49,5 +52,20 @@ git merge dev
 
 ```
 
-https://www.jianshu.com/p/5c9c6383aa36﻿
+
+
+## 回退每个commit
+
+
+1. 找到要回退的commit的**前一个commit的**hash值
+
+2. git rebase -i commit_hash
+
+3. 交互界面出现这个hash值之后的所有commit记录，pick-->drop, 丢弃你不想要的commit
+
+4. git rebase --continue
+
+
+
+
 
